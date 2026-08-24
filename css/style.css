@@ -7,14 +7,14 @@
 
 :root {
     --cor1: #1c181d;
-    --cor2: #412b42;
+    --cor2: #473c52;
     --cor3: #5a796d;
     --cor4: #754a70;
     --letra: white;
 }
 /*cores no tema claro*/
 .white-theme {
-    --cor1: e5e5fa;
+    --cor1: #e5e5fa;
     --cor2: #604364;
     --cor3: #a4daa4;
     --cor4: #cd89a2;
@@ -77,6 +77,7 @@ header > button#toggle-theme:active {
     transform: scale(0.9);
 }
 
+/*----------------------------------------------*/
 main {
     display: flex;
     flex-flow: column;
@@ -94,15 +95,16 @@ section#apresentacao {
     justify-content: center;
     align-items: center;
     gap: 5px;
-    margin: 90px 0;
+    margin: 5px;
+    height: auto;
 }
 
 section#apresentacao > img {
-    width: 155px;
-    height: 155px;
+    width: 16rem;
+    height: 16rem;
 }
 section#apresentacao > p {
-    padding: 15px 30px;
+    padding: 5px 30px;
 }
 
 section#apresentacao > div#botoes {
@@ -121,40 +123,52 @@ section#apresentacao > div#botoes > a {
 /*--------------------------------------*/
 section#projetos {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     text-align: center;
-    gap: 10px;
+    gap: 20px;
+    margin: 20px;
 }
 
-section#projetos > article#caixas-projetos {
-    margin: 10px;
-    gap: 20px;
+/*section#projetos > article#caixas-projetos {
     display: flex;
-    justify-content: center;
     flex-flow: column;
-}
+}*/
 
 div.projeto1, div.projeto2 {
     background-color: var(--cor2);
-    background-image: url('../img/fund.gif');
-    padding: 10px;
-    width: 350px;
-    gap: 20px;
-    border-radius: 20px 50px;
+    /*background-image: url('../img/fund.gif');*/
+    padding: 5px;
+    margin: 20px 0;
+    border-radius: 10px 20px;
 }
+
 div.projeto1 img, div.projeto2 img {
     width: 70px;
     height: 70px;
 }
-div.projeto1 a{
-    background-color: var(--cor4);
-    padding: 5px;
-    border-radius: 5px;
-}
 div.projeto1 > div.descricao-projeto {
+    display: flex;
+    flex-direction: column;
     background-color: var(--cor1);
-    border-radius: 15px;
-    margin: 0 30px;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    gap: 20px;
+}
+div.projeto2 > div.descricao-projeto {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor1);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    gap: 20px;
+}
+
+div.projeto1 a, div.projeto2 a{
+    background-color: var(--cor3);
+    border-radius: 5px;
+    padding: 5px;
 }
 
 /*------------------------------------------*/
