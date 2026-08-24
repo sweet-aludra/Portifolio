@@ -3,32 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>My Protifólio</title>
 </head>
 <body>
     <header>
         <h2 class="aludra">Adryelle</h2>
-        <button id="toggle-theme" type="button">Alternar tema</button> <!--Botao para mudança de cor da pagina-->
+        <button id="toggle-theme" type="button">.</button> <!--Botao para mudança de cor da pagina-->
     </header><hr>
 
     <main>
         <!--seção de apresentação-->
         <section id="apresentacao">
-            <img src="" alt="gif">
-            <h1>Olá!, seja bem vindo(a) ao bem Portifólio</h1>
+            <img src="img/coracao.gif" alt="gif">
+            <h1>Olá!, seja bem vindo(a) ao meu Portifólio</h1>
             <h2>Designer UX/UI | Front-end | QA Analyst</h2>
             <p>Formada em Análise e Desenvolvimento de Sistemas, com 4 anos de estudos e prática em análise de requisitos e testes manuais, além de conhecimentos em UI/UX Design e desenvolvimento front-end com HTML, CSS e JavaScript.</p>
             <div id="botoes">
-                <a href="#">Meus Projetos</a>
-                <a href="#">Curriculo</a>
+                <a href="#"><strong>Meus Projetos</strong></a>
+                <a href="#"><strong>Curriculo</strong></a>
             </div>
-            <p><a href="">Meu Github</a> | <a href="">Meu Linkedin</a></p>
+            <p><a href="https://github.com/sweet-aludra">Meu Github</a> | <a href="https://www.linkedin.com/in/adryelle-silva-719828267?utm_source=share_via&utm_content=profile&utm_medium=member_android">Meu Linkedin</a></p>
         </section><hr>
 
         <!--seção dos meus projetos-->
         <section id="projetos">
             <h2>Meus Projetos</h2>
-            <br>
             <article id="caixas-projetos">
                 <div class="projeto1">
                     <img src="" alt="logo">
@@ -48,32 +48,51 @@
                     </div>
                 </div>
             </article>
-        </section>
+        </section><hr>
 
+        <!--seção sobre mim-->
         <section id="sobre-me">
-            <article>
+            <article class="apresentacao">
                 <div>
-                    <h2>Sobre mim</h2>
-                    <br>
+                    <h2>Sobre mim</h2><br>
                     <p>Sou formada no Ensino Médio Técnico em Desenvolvimento de Sistemas pela ETEC de Heliópolis. Minhas principais áreas de interesse são o desenvolvimento Front-end, UI/UX Design e Quality Assurance (QA), com foco na análise e garantia da qualidade de sistemas. Também possuo interesse e conhecimentos introdutórios em robótica.</p>
-                    <br>
                     <p>Meu interesse por tecnologia começou ainda na infância, quando desenvolvi uma curiosidade genuína pela arquitetura e pelo funcionamento dos computadores. Na época, porém, meu acesso à tecnologia era limitado aos momentos das aulas de informática, que apresentavam uma abordagem bastante introdutória sobre o tema.</p>
-                    <br>
                     <p>Minha aproximação com a programação aconteceu posteriormente, por meio de uma oficina de desenvolvimento de jogos oferecida pelo Instituto CCA, onde tive meu primeiro contato com o Scratch e com os fundamentos da programação. Essa experiência despertou ainda mais meu interesse pela área e me motivou a conhecer diferentes campos da Tecnologia da Informação.</p>
-                    <br>
                     <p>Em 2023, ingressei no ensino técnico em Desenvolvimento de Sistemas, experiência que me proporcionou acesso a recursos, conhecimentos e projetos que contribuíram para o início da minha trajetória profissional na área de tecnologia.</p>
-                    <br>
+                    <br><img src="img/img-padrao.jpe" alt=""><br>
                     <p>Atualmente, curso Jogos na FATEC, área que sempre despertou meu interesse e que me permite aprofundar meus conhecimentos em desenvolvimento, tecnologia e criação de experiências interativas.</p>
-                    <br>
                     <p>Neste momento, meus principais objetivos profissionais são ingressar no mercado de tecnologia e desenvolver experiência nas áreas de Front-end, UI/UX Design ou Quality Assurance, contribuindo com meus conhecimentos enquanto continuo aprimorando minhas habilidades técnicas e profissionais.</p>
                 </div>
-                <div><img src="" alt=""></div>
             </article>
             <article>
-                <h3></h3>
+                <h3>Skills</h3>
                 <div></div>
             </article>
         </section>
     </main>
+
+    <!--contato-->
+    <footer></footer>
+
+    <script>
+        //acessibilidade para mudança de cor da pagina
+        const btn = document.getElementById('toggle-theme');
+
+        //quando carregar a pagina
+        if (localStorage.getItem('theme') === 'white') {
+            document.body.classList.add('white-theme');
+        }
+
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('white-theme');
+            if (document.body.classList.contains('white-theme')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'white');
+            }
+        });
+
+        console.log("hello world!");
+    </script>
 </body>
 </html>
