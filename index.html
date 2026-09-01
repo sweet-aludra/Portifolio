@@ -9,16 +9,27 @@
 <body>
     <header>
         <h2 class="aludra">Adryelle</h2>
-        <button id="toggle-theme" type="button">.</button> <!--Botao para mudança de cor da pagina-->
+        <div>
+            <button id="toggle-theme" type="button">.</button> <!--Botao para mudança de cor da pagina-->
+        
+            <button id="menu-toggle" type="button" aria-label="Abrir menu">
+                ☰
+            </button>
+            <nav id="menu">
+                <a href="#projetos">Projetos</a>
+                <a href="#sobre-me">Sobre mim</a>
+                <a href="#prototipos">Protótipos</a>
+            </nav>
+        </div>
     </header><hr>
 
     <main>
         <!--seção de apresentação-->
         <section id="apresentacao">
-            <img src="img/tv.gif" alt="gif">
+            <img src="img/icones/tv.gif" alt="gif">
             <h1>Olá!, seja bem vindo(a) ao meu Portifólio</h1>
-            <h2>Designer UX/UI | Front-end | QA Analyst</h2>
-            <p>Formada em Análise e Desenvolvimento de Sistemas, com 4 anos de estudos e prática em análise de requisitos e testes manuais, além de conhecimentos em UI/UX Design e desenvolvimento front-end com HTML, CSS e JavaScript.</p>
+            <h2>UI/UX | QA | Full-stack</h2>
+            <p>Formada em Análise e Desenvolvimento de Sistemas, com 4 anos de estudos e prática em análise de requisitos, testes manuais, UI/UX Design e desenvolvimento fUll-stack.</p>
             <div id="botoes">
                 <a href="#"><strong>Meus Projetos</strong></a>
                 <a href="#"><strong>Curriculo</strong></a>
@@ -31,18 +42,27 @@
             <h2>Meus Projetos</h2>
             <article id="caixas-projetos">
                 <div class="projeto1">
-                    <img src="img/logo-teste.png" alt="logo">
+                    <img src="img/capas/capa-laranja.jpg" alt="capa">
                     <div class="descricao-projeto">
-                        <h4>titulo do projeto</h4>
+                        <h2>Chat + Chatbot</h2>
                         <p>descricao do projeto</p>
                         <a href="#">Veja</a>
                     </div>
                 </div>
 
                 <div class="projeto2">
-                    <img src="img/logo-teste.png" alt="logo">
+                    <img src="img/capas/capa-laranja.jpg" alt="capa">
                     <div class="descricao-projeto">
-                        <h4>titulo do projeto</h4>
+                        <h2>Eclipe TV</h2>
+                        <p>descricao do projeto</p>
+                        <a href="#">Veja</a>
+                    </div>
+                </div>
+
+                <div class="projeto3">
+                    <img src="img/capas/capa-laranja.jpg" alt="capa">
+                    <div class="descricao-projeto">
+                        <h2>Deliruim</h2>
                         <p>descricao do projeto</p>
                         <a href="#">Veja</a>
                     </div>
@@ -55,13 +75,13 @@
             <article class="apresentacao">
                 <div>
                     <h2>Sobre mim</h2><br>
-                    <p>Sou formada no Ensino Médio Técnico em Desenvolvimento de Sistemas pela ETEC de Heliópolis. Minhas principais áreas de interesse são o desenvolvimento Front-end, UI/UX Design e Quality Assurance (QA), com foco na análise e garantia da qualidade de sistemas. Também possuo interesse e conhecimentos introdutórios em robótica.</p>
-                    <p>Meu interesse por tecnologia começou ainda na infância, quando desenvolvi uma curiosidade genuína pela arquitetura e pelo funcionamento dos computadores. Na época, porém, meu acesso à tecnologia era limitado aos momentos das aulas de informática, que apresentavam uma abordagem bastante introdutória sobre o tema.</p>
-                    <p>Minha aproximação com a programação aconteceu posteriormente, por meio de uma oficina de desenvolvimento de jogos oferecida pelo Instituto CCA, onde tive meu primeiro contato com o Scratch e com os fundamentos da programação. Essa experiência despertou ainda mais meu interesse pela área e me motivou a conhecer diferentes campos da Tecnologia da Informação.</p>
-                    <p>Em 2023, ingressei no ensino técnico em Desenvolvimento de Sistemas, experiência que me proporcionou acesso a recursos, conhecimentos e projetos que contribuíram para o início da minha trajetória profissional na área de tecnologia.</p>
-                    <br><img src="img/img-padrao.jpe" alt=""><br>
-                    <p>Atualmente, curso Jogos na FATEC, área que sempre despertou meu interesse e que me permite aprofundar meus conhecimentos em desenvolvimento, tecnologia e criação de experiências interativas.</p>
-                    <p>Neste momento, meus principais objetivos profissionais são ingressar no mercado de tecnologia e desenvolver experiência nas áreas de Front-end, UI/UX Design ou Quality Assurance, contribuindo com meus conhecimentos enquanto continuo aprimorando minhas habilidades técnicas e profissionais.</p>
+                    <img class="imagem-sobre" src="img/capas/capa-rosa.jpg" alt="">
+                    <div class="texto-sobre">
+                        <p>Meu interesse por tecnologia começou ainda na infância, quando desenvolvi uma curiosidade genuína pela arquitetura e pelo funcionamento dos computadores. Na época, porém, meu acesso à tecnologia era limitado aos momentos das aulas de informática, que apresentavam uma abordagem bastante introdutória sobre o tema.</p>
+                        <p>Minha aproximação com a programação aconteceu posteriormente, por meio de uma oficina de desenvolvimento de jogos oferecida pelo Instituto CCA, onde tive meu primeiro contato com o Scratch e com os fundamentos da programação. Essa experiência despertou ainda mais meu interesse pela área e me motivou a conhecer diferentes campos da Tecnologia da Informação.</p>
+                        <p>Em 2023, ingressei no ensino técnico(ETEC) em Desenvolvimento de Sistemas, experiência que me proporcionou acesso a recursos, conhecimentos e projetos que contribuíram para o início da minha trajetória profissional na área de tecnologia. Atualmente, curso Jogos na FATEC, área que sempre despertou meu interesse e que me permite aprofundar meus conhecimentos em desenvolvimento, tecnologia e criação de experiências interativas.</p>
+                        <p>Neste momento, meu principal objetivo é ingressar no mercado de tecnologia na área de UI/UX Design ou Quality Assurance.</p>
+                    </div>
                 </div>
             </article>
             <article>
@@ -92,7 +112,13 @@
             }
         });
 
-        console.log("hello world!");
+        //Menu
+        const menuToggle = document.querySelector("#menu-toggle");
+        const menu = document.querySelector("#menu");
+
+        menuToggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
     </script>
 </body>
 </html>
