@@ -8,15 +8,15 @@
 :root {
     --cor1: #1c181d;
     --cor2: #2a2034;
-    --cor3: #5a796d;
+    --cor3: #417656;
     --cor4: #754a70;
     --letra: white;
 }
 /*cores no tema claro*/
 .white-theme {
     --cor1: #e5e5fa;
-    --cor2: #a292a4;
-    --cor3: #a4daa4;
+    --cor2: #c7bcc9;
+    --cor3: #b7deb7;
     --cor4: #cd89a2;
     --letra: black;
 }
@@ -139,7 +139,7 @@ section#apresentacao {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 15px;
     height: auto;
 }
 
@@ -180,32 +180,18 @@ div.projeto1, div.projeto2, div.projeto3 {
     flex-flow: row;
     background-color: var(--cor2);
     margin: 20px 0;
-    height: 15rem;
+    height: 100%;
 }
 
 div.projeto1 img, div.projeto2 img, div.projeto3 img {
-    width: 6rem;
-    height: 100%;
+    width: 8rem;
     object-fit: cover;
 }
-div.projeto1 > div.descricao-projeto {
+
+div.descricao-projeto {
     display: flex;
     flex-direction: column;
-    padding: 10px 10px 10px 25px;
-    gap: 20px;
-}
-div.projeto2 > div.descricao-projeto {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    padding: 10px 10px 10px 25px;
-    gap: 20px;
-}
-div.projeto3 > div.descricao-projeto {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    padding: 10px 10px 10px 25px;
+    padding: 10px;
     gap: 20px;
 }
 
@@ -214,6 +200,7 @@ div.projeto1 a, div.projeto2 a, div.projeto3 a{
     border-radius: 5px;
     padding: 5px;
     text-align: center;
+    font-size: 1.2rem;
 }
 
 /*------------------------------------------*/
@@ -223,6 +210,29 @@ section#sobre-me {
     gap: 15px;
 }
 
+article#skills > div {
+    border: 1px solid var(--letra);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+article#skills > div > h3 {
+    text-align: start;
+    margin-bottom: 10px;
+}
+
+article#skills > div > div.skills-topics {
+    display: flex;
+    flex-wrap: wrap; /*quebra conteudo*/
+    gap: 10px;
+}
+article#skills > div > div.skills-topics > p{
+    border: 2px solid var(--cor3);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/*----*/
 .apresentacao {
     width: 100%;
 }
@@ -233,16 +243,31 @@ section#sobre-me {
 
 .imagem-sobre {
     float: left;
-
     width: 9rem;
-    height: 11rem;
-
+    height: 13rem;
     object-fit: cover;
-
-    margin: 0 10px 10px 0;
+    margin: 0 10px 0 0; /*espaçamento nas laterais da img*/
 }
 
 .texto-sobre p {
-    padding: 0 0 0.5rem;
-    line-height: 1.7;
+    padding: 0 0 1rem; /*espaçamento entre paragrafos*/
+    line-height: 1.7; /*espaçamento de linha*/
+}
+
+/*----------------------------------------------------*/
+footer {
+    padding: 15px;
+}
+
+footer > h2 {
+    margin-bottom: 10px;
+}
+footer > div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+footer > div > img{
+    height: 110px;
+    width: 90px;
 }
