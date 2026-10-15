@@ -121,6 +121,12 @@ header > button#toggle-theme:active {
     display: flex;
 }
 
+/* link da página atual no menu */
+#menu a[aria-current="page"] {
+    opacity: 0.5;
+    cursor: default;
+}
+
 /*----------------------------------------------*/
 main {
     display: flex;
@@ -133,8 +139,13 @@ section {
     margin: 20px;
 }
 
-/*------------------------*/
-section#apresentacao {
+/* SPA */
+.pagina[hidden] {
+    display: none !important;
+}
+
+/* Página inicial */
+section#inicio {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -143,25 +154,52 @@ section#apresentacao {
     height: auto;
 }
 
-section#apresentacao > img {
+section#inicio > img {
     width: 16rem;
     height: 16rem;
 }
-section#apresentacao > p {
+
+section#inicio > p {
     padding: 5px 30px;
+    text-align: left;
 }
 
-section#apresentacao > div#botoes {
+section#inicio > #botoes {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     gap: 10px;
 }
-section#apresentacao > div#botoes > a {
+
+section#inicio > #botoes > a {
     padding: 7px;
     border-radius: 5px;
     background-color: var(--cor3);
     font-size: 1.2rem;
+}
+
+/* Página de projetos */
+section#projetos {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    gap: 10px;
+}
+
+/* Página de protótipos */
+section#prototipos {
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+    text-align: center;
+    min-height: 50vh;
+}
+
+/* Página sobre mim */
+section#sobre-me {
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
 }
 
 /*--------------------------------------*/
@@ -193,6 +231,9 @@ div.descricao-projeto {
     flex-direction: column;
     padding: 10px;
     gap: 20px;
+}
+div.descricao-projeto > p {
+    text-align: left;
 }
 
 div.projeto1 a, div.projeto2 a, div.projeto3 a{
@@ -252,6 +293,7 @@ article#skills > div > div.skills-topics > p{
 .texto-sobre p {
     padding: 0 0 1rem; /*espaçamento entre paragrafos*/
     line-height: 1.7; /*espaçamento de linha*/
+    text-align: left;
 }
 
 /*----------------------------------------------------*/
@@ -272,3 +314,31 @@ footer > div > a > img {
     width: 30px;
     height: 30px;
 }
+
+
+/* ------------------- carregamento ---------------------- */
+#loading-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor1);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.loading-gif {
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
+}
+
+#loading-screen.loaded {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+

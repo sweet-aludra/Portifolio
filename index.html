@@ -4,83 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>My Protifólio</title>
+    <title>Meu Portfólio | Adryelle</title>
 </head>
+
 <body>
+    <!-- tela de carregamento -->
+    <div id="loading-screen">
+        <img src="img/icones/tv.gif" alt="Carregando..." class="loading-gif">
+    </div>
+
     <header>
         <h2 class="aludra">Adryelle</h2>
+
         <div>
-            <button id="toggle-theme" type="button">.</button> <!--Botao para mudança de cor da pagina-->
-        
-            <button id="menu-toggle" type="button" aria-label="Abrir menu">
+            <button id="toggle-theme" type="button"
+                aria-label="Alternar tema"></button>
+
+            <button id="menu-toggle" type="button"
+                aria-label="Abrir menu" aria-expanded="false">
                 ☰
             </button>
-            <nav id="menu">
-                <a href="#apresentacao">Inicio</a>
-                <a href="#prototipos">Protótipos</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#sobre-me">Sobre mim</a>
+
+            
+            <nav id="menu" aria-label="Menu principal">
+                <a href="#inicio" data-page="inicio">Início</a>
+                <a href="#projetos" data-page="projetos">Projetos</a>
+                <a href="#sobre-me" data-page="sobre-me">Sobre mim</a>
             </nav>
+
         </div>
     </header><hr>
 
     <main>
-        <!--seção de apresentação-->
-        <section id="apresentacao">
-            <img src="img/icones/tv.gif" alt="gif">
-            <h1>Olá!, seja bem vindo(a) ao meu Portifólio</h1>
-            <h2>QA Analyst | UI/UX Desing</h2>
-            <p>Formada em Análise e Desenvolvimento de Sistemas, com 4 anos de estudos e prática em análise de requisitos, testes manuais, UI/UX Design e desenvolvimento fUll-stack.
-               &#9749 Verifique <strong>Meu Drive</strong> para visualizar mais a fundo.
+        <!-- seção de inicio -->
+        <section id="inicio" class="pagina">
+            <img src="img/icones/tv.gif" alt="Animação de uma televisão">
+
+            <h1>Olá! Seja bem-vindo(a) ao meu portfólio</h1>
+            <h2>QA Analyst | UI/UX Design</h2>
+            <p>
+                Formada em Análise e Desenvolvimento de Sistemas, com
+                4 anos de estudos e prática em análise de requisitos,
+                testes manuais, UI/UX Design e desenvolvimento full-stack.
+                ☕ Verifique <strong>Meu Drive</strong> para conhecer melhor meus trabalhos.
             </p>
             <div id="botoes">
-                <a href="https://drive.google.com/drive/folders/1l9YO3cziCI2P-YEKIParNPc7WzVXyIxm?usp=drive_link"><strong>Meu Drive</strong></a>
-                <a href="#"><strong>Curriculo</strong></a>
-            </div>
-            <p><a href="https://github.com/sweet-aludra">Meu Github</a> | <a href="https://www.linkedin.com/in/adryelle-silva-719828267?utm_source=share_via&utm_content=profile&utm_medium=member_android">Meu Linkedin</a></p>
-        </section><hr>
+                <a href="https://drive.google.com/drive/folders/1l9YO3cziCI2P-YEKIParNPc7WzVXyIxm?usp=drive_link">
+                    <strong>Meu Drive</strong>
+                </a>
 
-        <!--seção dos meus projetos-->
-        <section id="projetos">
+                <a href="#">
+                    <strong>Currículo</strong>
+                </a>
+            </div>
+            <p>
+                <a href="https://github.com/sweet-aludra"
+                   target="_blank" rel="noopener noreferrer">
+                    Meu Github
+                </a>
+                |
+                <a href="https://www.linkedin.com/in/adryelle-silva-719828267/"
+                   target="_blank" rel="noopener noreferrer">
+                    Meu LinkedIn
+                </a>
+            </p>
+        </section>
+
+        <!-- seção de projetos e prototipos -->
+        <section id="projetos" class="pagina" hidden>
+            <!-- meus projetos -->
             <h2>Meus Projetos</h2>
             <article id="caixas-projetos">
                 <div class="projeto1">
-                    <img src="img/capas/capa-login.jpe" alt="capa">
+                    <img src="img/capas/capa-login.jpe" alt="Capa do Login interativo">
+
                     <div class="descricao-projeto">
                         <h2>Login interativo</h2>
-                        <p>Projeto de Edutainment que une educação e entretenimento para ensinar bancos de dados de forma interativa, com foco na segurança dos usuários e nas boas práticas de proteção de dados.</p>
+                        <p>
+                            Projeto de Edutainment que une educação e entretenimento
+                            para ensinar bancos de dados de forma interativa, com
+                            foco na segurança dos usuários e na proteção de dados.
+                        </p>
                         <a href="#">Veja</a>
                     </div>
                 </div>
 
                 <div class="projeto2">
-                    <img src="img/capas/capa-rosavelvet.jpeg" alt="capa">
+                    <img src="img/capas/capa-rosavelvet.jpeg" alt="Capa do RosaVelvet">
+
                     <div class="descricao-projeto">
                         <h2>RosaVelvet</h2>
-                        <p>Esse projeto é uma reformulação de uma loja virtual que fiz há alguns anos em uma fábrica de software, focada em perfumarias.</p>
+                        <p>
+                            Reformulação de uma loja virtual desenvolvida durante
+                            minha experiência em fábrica de software, com foco
+                            no segmento de perfumaria.
+                        </p>
                         <a href="#">Veja</a>
                     </div>
                 </div>
 
                 <div class="projeto3">
-                    <img src="img/capas/capa-delirium.jpeg" alt="capa">
+                    <img src="img/capas/capa-delirium.jpeg" alt="Capa do Delirium">
+
                     <div class="descricao-projeto">
-                        <h2>Deliruim</h2>
-                        <p>Projeto desenvolvido durante meu último ano de ADS, explorando Edutainment e PWAs por meio de uma experiência gamificada que combina ARGs, mistérios e flores.</p>
-                        <a href="#">Veja</a>
+                        <h2>Delirium</h2>
+                        <p>
+                            Projeto desenvolvido durante meu último ano de ADS,
+                            explorando Edutainment e PWAs por meio de uma experiência
+                            gamificada que combina ARGs, mistérios e flores.
+                        </p>
+                        <a href="https://github.com/sweet-aludra/Delirium">Veja</a>
                     </div>
                 </div>
-            </article>
+            </article><hr>
 
-            <!--secão dos meus prototipos-->
+            <!-- meus prototipos -->
             <section id="prototipos">
-                <h2>Prototipos</h2>
-                <article></article>
-            </section><hr>
+                <h2>Meus Protótipos</h2>
+                <article id="caixas-prototipos"></article>
+            </section>
         </section>
 
-        <!--seção sobre mim-->
-        <section id="sobre-me">
+
+        <!-- seção sobre-mim -->
+        <section id="sobre-me" class="pagina" hidden>
             <article id="skills">
                 <h3>Skills</h3>
                 <div>
@@ -97,10 +144,10 @@
                     <h3>Hard Skills</h3>
                     <div class="skills-topics">
                         <p>Lógica de programação</p>
-                        <p>Javascript</p>
-                        <p>Html/CSS</p>
+                        <p>JavaScript</p>
+                        <p>HTML/CSS</p>
                         <p>Fundamentos de QA e testes</p>
-                        <p>Design thinking</p>
+                        <p>Design Thinking</p>
                         <p>DDD</p>
                     </div>
                 </div>
@@ -108,67 +155,82 @@
                 <div>
                     <h3>Ferramentas</h3>
                     <div class="skills-topics">
-                        <p>Pacote office</p>
+                        <p>Pacote Office</p>
                         <p>Trello</p>
                         <p>Figma</p>
-                        <p>VScode</p>
-                        <p>Git/Github</p>
+                        <p>VS Code</p>
+                        <p>Git/GitHub</p>
                     </div>
                 </div>
             </article>
 
             <article class="apresentacao">
                 <div>
-                    <h2>Sobre mim</h2><br>
-                    <img class="imagem-sobre" src="img/capas/capa-rosa.jpg" alt="">
+                    <h2>Sobre mim</h2>
+                    <img class="imagem-sobre"
+                         src="img/capas/capa-rosa.jpg"
+                         alt="Imagem de apresentação">
                     <div class="texto-sobre">
-                        <p>Meu interesse por tecnologia começou ainda na infância, quando desenvolvi uma curiosidade genuína pela arquitetura e pelo funcionamento dos computadores. Na época, porém, meu acesso à tecnologia era limitado aos momentos das aulas de informática, que apresentavam uma abordagem bastante introdutória sobre o tema.</p>
-                        <p>Minha aproximação com a programação aconteceu posteriormente, por meio de uma oficina de desenvolvimento de jogos oferecida pelo Instituto CCA, onde tive meu primeiro contato com o Scratch e com os fundamentos da programação. Essa experiência despertou ainda mais meu interesse pela área e me motivou a conhecer diferentes campos da Tecnologia da Informação.</p>
-                        <p>Em 2023, ingressei no ensino técnico(ETEC) em Desenvolvimento de Sistemas, experiência que me proporcionou acesso a recursos, conhecimentos e projetos que contribuíram para o início da minha trajetória profissional na área de tecnologia. Atualmente, curso Jogos na FATEC, área que sempre despertou meu interesse e que me permite aprofundar meus conhecimentos em desenvolvimento, tecnologia e criação de experiências interativas.</p>
-                        <p>Neste momento, meu principal objetivo é ingressar no mercado de tecnologia na área de UI/UX Design ou Quality Assurance.</p>
+                        <p>
+                            Meu interesse por tecnologia começou ainda
+                            na infância, quando desenvolvi uma curiosidade
+                            genuína pela arquitetura e pelo funcionamento
+                            dos computadores. Na época, porém, meu acesso
+                            à tecnologia era limitado aos momentos das
+                            aulas de informática.
+                        </p>
+
+                        <p>
+                            Minha aproximação com a programação aconteceu
+                            posteriormente, por meio de uma oficina de
+                            desenvolvimento de jogos oferecida pelo
+                            Instituto CCA, onde tive meu primeiro contato
+                            com o Scratch e com os fundamentos da programação.
+                        </p>
+
+                        <p>
+                            Em 2023, ingressei no ensino técnico da ETEC
+                            em Desenvolvimento de Sistemas, experiência
+                            que me proporcionou acesso a recursos,
+                            conhecimentos e projetos que contribuíram
+                            para o início da minha trajetória na tecnologia.
+                            Atualmente, curso Jogos na FATEC, área que
+                            sempre despertou meu interesse e que me permite
+                            aprofundar meus conhecimentos em desenvolvimento
+                            e criação de experiências interativas.
+                        </p>
+
+                        <p>
+                            Neste momento, meu principal objetivo é
+                            ingressar no mercado de tecnologia nas áreas
+                            de UI/UX Design ou Quality Assurance.
+                        </p>
                     </div>
                 </div>
             </article>
-            
         </section>
     </main><hr>
 
-    <!--contato-->
     <footer>
         <h2 class="aludra">Adryelle</h2>
         <h3>Minhas redes!</h3>
         <p>adryps71@gmail.com</p>
+
         <div>
-            <a href=""><img src="img/icones/github.png" alt="icon github" /></a>
-            <a href=""><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" /></a>
+            <a href="https://github.com/sweet-aludra"
+               target="_blank" rel="noopener noreferrer">
+                <img src="img/icones/github.png" alt="GitHub">
+            </a>
+
+            <a href="https://www.linkedin.com/in/adryelle-silva-719828267/"
+               target="_blank" rel="noopener noreferrer">
+                <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
+                    alt="LinkedIn">
+            </a>
         </div>
     </footer>
 
-    <script>
-        //acessibilidade para mudança de cor da pagina
-        const btn = document.getElementById('toggle-theme');
-
-        //quando carregar a pagina
-        if (localStorage.getItem('theme') === 'white') {
-            document.body.classList.add('white-theme');
-        }
-
-        btn.addEventListener('click', () => {
-            document.body.classList.toggle('white-theme');
-            if (document.body.classList.contains('white-theme')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'white');
-            }
-        });
-
-        //Menu
-        const menuToggle = document.querySelector("#menu-toggle");
-        const menu = document.querySelector("#menu");
-
-        menuToggle.addEventListener("click", () => {
-            menu.classList.toggle("active");
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
