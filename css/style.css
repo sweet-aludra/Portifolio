@@ -78,6 +78,7 @@ button#toggle-theme {
 }
 
 #toggle-theme {
+    cursor: pointer;
     background-image: url('../img/icones/sun.png');
 }
 .white-theme #toggle-theme {
